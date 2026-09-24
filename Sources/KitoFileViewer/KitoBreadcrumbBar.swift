@@ -41,6 +41,7 @@ public struct KitoBreadcrumbBar: View {
                     ForEach(Array(visible.enumerated()), id: \.element.id) { index, item in
                         if index > 0 {
                             Image(systemName: "chevron.compact.right")
+                                .flipsForRightToLeftLayoutDirection(true)
                                 .font(.caption.weight(.bold))
                                 .foregroundStyle(theme.colors.secondary.opacity(0.6))
                                 .accessibilityHidden(true)

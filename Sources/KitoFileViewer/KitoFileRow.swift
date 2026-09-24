@@ -92,7 +92,7 @@ public struct KitoFolderRow: View {
                     .foregroundStyle(theme.colors.secondary)
             }
             Spacer(minLength: 0)
-            Image(systemName: "chevron.right")
+            Image(systemName: "chevron.forward")
                 .font(.footnote.weight(.semibold))
                 .foregroundStyle(theme.colors.secondary.opacity(0.7))
         }
