@@ -121,6 +121,13 @@ Generates a three-page invoice from a made-up Nairobi design studio, a two-page 
 CSV of expenses, notes, a Swift file, JSON and two drawn images, plus a few remote-only items
 (xlsx, pptx, docx, zip, mov, m4a) that show their badges. Everything is fictional.
 
+## Right-to-left
+
+Lists, grids, breadcrumbs and toolbars mirror automatically; row chevrons and breadcrumb separators follow the reading direction.
+Panning a zoomed image follows the finger in right-to-left layouts too.
+Document content (PDF pages, text files, the sample documents) is shown as authored and is never mirrored.
+Nothing extra is needed from the app.
+
 ## Migrating from 0.1
 
 0.2.0 renames three types so KitoFileViewer can sit in the same file as KitoImageLoader,

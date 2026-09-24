@@ -27,6 +27,7 @@ public struct KitoFileImageViewer: View {
     @State private var committedOffset: CGSize = .zero
     @Environment(\.kitoTheme) private var theme
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.layoutDirection) private var layoutDirection
 
     private enum Source {
         case url(URL)
@@ -94,7 +95,9 @@ public struct KitoFileImageViewer: View {
     }
 
     private func translated(_ translation: CGSize) -> CGSize {
-        CGSize(width: committedOffset.width + translation.width, height: committedOffset.height + translation.height)
+        // Drag translations are physical, but `.offset(x:)` mirrors in right-to-left layouts.
+        let dx = layoutDirection == .rightToLeft ? -translation.width : translation.width
+        return CGSize(width: committedOffset.width + dx, height: committedOffset.height + translation.height)
     }
 
     private func limited(_ proposed: CGSize, in size: CGSize) -> CGSize {
