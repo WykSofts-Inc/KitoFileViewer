@@ -1,5 +1,7 @@
 # KitoFileViewer
 
+**[Documentation](https://wyksofts-inc.github.io/KitoFileViewer/documentation/kitofileviewer/)**
+
 Files and documents for SwiftUI: file lists and grids with sort, grouping, search, breadcrumbs,
 swipe actions and a selection bar; a PDFKit viewer with page thumbnails, "3 / 12", search with
 highlighted matches and zoom; QuickLook for everything else; zoomable images; a line-numbered
