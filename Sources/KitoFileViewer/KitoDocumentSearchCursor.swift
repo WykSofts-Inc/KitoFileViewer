@@ -68,7 +68,7 @@ public struct KitoDocumentSearchCursor: Hashable, Sendable {
 }
 
 /// Page indicator text.
-public enum KitoPageIndicator {
+public enum KitoPDFPageIndicator {
     /// "3 / 12" for a zero-based page index. Returns "" when there are no pages.
     public static func label(pageIndex: Int, pageCount: Int) -> String {
         guard pageCount > 0 else { return "" }

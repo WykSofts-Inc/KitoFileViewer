@@ -87,7 +87,7 @@ public struct KitoDownloadRow: View {
     }
 
     private var ring: some View {
-        KitoProgressRing(fraction: ringFraction, tint: stateColor, lineWidth: 3.5) {
+        KitoTransferProgressRing(fraction: ringFraction, tint: stateColor, lineWidth: 3.5) {
             ZStack {
                 KitoFileBadge(kind: transfer.kind, label: "", color: transfer.kind.color, size: 28)
                     .opacity(transfer.phase == .completed ? 0 : 1)

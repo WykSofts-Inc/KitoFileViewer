@@ -120,7 +120,7 @@ public struct KitoFilePreview: View {
         case let (.pdf, url?):
             KitoPDFViewer(url: url, showsShareButton: false, tint: tint)
         case let (.image, url?):
-            KitoImageViewer(url: url)
+            KitoFileImageViewer(url: url)
                 .background(Color.black.opacity(0.92))
         case let (.text, url?):
             KitoTextViewer(url: url, tint: tint)

@@ -48,7 +48,7 @@ public final class KitoPDFViewerModel {
     public private(set) var isSearching = false
 
     /// "3 / 12".
-    public var pageLabel: String { KitoPageIndicator.label(pageIndex: pageIndex, pageCount: pageCount) }
+    public var pageLabel: String { KitoPDFPageIndicator.label(pageIndex: pageIndex, pageCount: pageCount) }
 
     /// The result that is selected, if any.
     public var currentResult: KitoPDFSearchResult? {

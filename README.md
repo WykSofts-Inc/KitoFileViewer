@@ -62,7 +62,7 @@ KitoFolderIcon(size: 44)
 ```swift
 KitoFilePreview(file)                     // header with Close and Share, then the best viewer
 KitoPDFViewer(url: invoiceURL)            // thumbnails strip, "3 / 12", search, zoom, share
-KitoImageViewer(url: photoURL)            // pinch, drag, double-tap
+KitoFileImageViewer(url: photoURL)        // pinch, drag, double-tap
 KitoTextViewer(url: swiftFileURL)         // line numbers, monospaced, light syntax colours, wrap
 KitoQuickLookPreview(urls: [docxURL, keynoteURL], selection: $index)
 ```
@@ -91,7 +91,7 @@ transfers.simulate(name: "Site plan.pdf", size: 18_400_000, duration: 8, failsAt
 
 KitoTransferList(model: transfers) { file in preview = file }
 KitoDownloadRow(transfer, model: transfers)
-KitoProgressRing(fraction: 0.42, tint: .blue)
+KitoTransferProgressRing(fraction: 0.42, tint: .blue)
 ```
 
 Rows show "4.2 MB of 18 MB · 1.3 MB/s · 12 s left" with pause, resume and cancel; a failed
@@ -121,6 +121,19 @@ Generates a three-page invoice from a made-up Nairobi design studio, a two-page 
 CSV of expenses, notes, a Swift file, JSON and two drawn images, plus a few remote-only items
 (xlsx, pptx, docx, zip, mov, m4a) that show their badges. Everything is fictional.
 
+## Migrating from 0.1
+
+0.2.0 renames three types so KitoFileViewer can sit in the same file as KitoImageLoader,
+KitoCarousel and KitoLoaders without "ambiguous" errors:
+
+| 0.1 | 0.2 |
+| --- | --- |
+| `KitoImageViewer` | `KitoFileImageViewer` |
+| `KitoPageIndicator` | `KitoPDFPageIndicator` |
+| `KitoProgressRing` | `KitoTransferProgressRing` |
+
+Initialisers and behaviour are unchanged; a find-and-replace of the old names is all it takes.
+
 ## Info.plist
 
 Nothing is required. The Files picker, share sheet and QuickLook need no usage descriptions. Add
@@ -130,7 +143,7 @@ Documents folder to appear in the Files app.
 ## Installation
 
 ```swift
-.package(url: "https://github.com/WykSofts-Inc/KitoFileViewer.git", from: "0.1.0")
+.package(url: "https://github.com/WykSofts-Inc/KitoFileViewer.git", from: "0.2.0")
 ```
 
 ## License
