@@ -1,5 +1,5 @@
 //
-//  KitoImageViewer.swift
+//  KitoFileImageViewer.swift
 //  KitoFileViewer
 //
 //  Created by Wycliff on 9/24/26.
@@ -12,10 +12,10 @@ import KitoCore
 /// An image you can pinch to zoom, drag around when zoomed, and double-tap to zoom in or back out.
 ///
 /// ```swift
-/// KitoImageViewer(url: photoURL)
-/// KitoImageViewer(image: uiImage, maximumZoom: 6)
+/// KitoFileImageViewer(url: photoURL)
+/// KitoFileImageViewer(image: uiImage, maximumZoom: 6)
 /// ```
-public struct KitoImageViewer: View {
+public struct KitoFileImageViewer: View {
     private let source: Source
     private let maximumZoom: CGFloat
 

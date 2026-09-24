@@ -1,5 +1,5 @@
 //
-//  KitoProgressRing.swift
+//  KitoTransferProgressRing.swift
 //  KitoFileViewer
 //
 //  Created by Wycliff on 9/24/26.
@@ -12,10 +12,10 @@ import KitoCore
 /// A circular progress ring with a gradient stroke and a rounded cap. `nil` spins as indeterminate.
 ///
 /// ```swift
-/// KitoProgressRing(fraction: 0.42, tint: .blue)
-/// KitoProgressRing(fraction: nil)              // size unknown yet
+/// KitoTransferProgressRing(fraction: 0.42, tint: .blue)
+/// KitoTransferProgressRing(fraction: nil)      // size unknown yet
 /// ```
-public struct KitoProgressRing<Center: View>: View {
+public struct KitoTransferProgressRing<Center: View>: View {
     private let fraction: Double?
     private let tint: Color?
     private let lineWidth: CGFloat
@@ -78,7 +78,7 @@ public struct KitoProgressRing<Center: View>: View {
     }
 }
 
-public extension KitoProgressRing where Center == EmptyView {
+public extension KitoTransferProgressRing where Center == EmptyView {
     init(fraction: Double?, tint: Color? = nil, lineWidth: CGFloat = 3.5) {
         self.init(fraction: fraction, tint: tint, lineWidth: lineWidth) { EmptyView() }
     }

@@ -82,7 +82,7 @@ public struct KitoTransferList: View {
         let accent = tint ?? theme.colors.primary
         let count = model.activeCount
         return HStack(spacing: theme.spacing.md) {
-            KitoProgressRing(fraction: model.overallFraction, tint: accent, lineWidth: 5) {
+            KitoTransferProgressRing(fraction: model.overallFraction, tint: accent, lineWidth: 5) {
                 Text("\(Int((model.overallFraction * 100).rounded()))%")
                     .font(theme.typography.caption.weight(.bold).monospacedDigit())
                     .foregroundStyle(theme.colors.onSurface)

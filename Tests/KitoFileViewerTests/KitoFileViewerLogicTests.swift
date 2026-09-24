@@ -79,9 +79,9 @@ final class KitoDocumentSearchCursorTests: XCTestCase {
     }
 
     func testPageIndicator() {
-        XCTAssertEqual(KitoPageIndicator.label(pageIndex: 2, pageCount: 12), "3 / 12")
-        XCTAssertEqual(KitoPageIndicator.label(pageIndex: 40, pageCount: 12), "12 / 12")
-        XCTAssertEqual(KitoPageIndicator.label(pageIndex: 0, pageCount: 0), "")
+        XCTAssertEqual(KitoPDFPageIndicator.label(pageIndex: 2, pageCount: 12), "3 / 12")
+        XCTAssertEqual(KitoPDFPageIndicator.label(pageIndex: 40, pageCount: 12), "12 / 12")
+        XCTAssertEqual(KitoPDFPageIndicator.label(pageIndex: 0, pageCount: 0), "")
     }
 }
 
